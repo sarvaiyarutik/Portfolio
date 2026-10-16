@@ -252,49 +252,35 @@ a:hover {
   font-size: 1.15rem;
 }
 
-/* Hero monogram (no photo available — CSS-designed element) */
+/* Hero portrait */
 
-.hero-monogram {
-  position: relative;
+.hero-portrait {
+  max-width: 360px;
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
   aspect-ratio: 1 / 1;
-  max-width: 340px;
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.1rem;
-  background-color: var(--color-surface);
-  background-image: radial-gradient(circle, rgba(28, 28, 26, 0.09) 1px, transparent 1px);
-  background-size: 22px 22px;
+  object-fit: cover;
+  object-position: center top;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
+  background-color: var(--color-surface);
 }
 
-.monogram-initials {
-  font-family: var(--font-display);
-  font-size: clamp(4.5rem, 10vw, 6rem);
-  font-weight: 600;
-  line-height: 1;
-  color: var(--color-text);
-  letter-spacing: -0.03em;
-}
-
-.monogram-line {
-  width: 48px;
-  height: 2px;
-  background: var(--color-accent);
-}
-
-.monogram-caption {
+.hero-portrait figcaption {
+  margin-top: 0.85rem;
   font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-muted);
-  padding: 0 1.5rem;
-  text-align: center;
+  text-align: right;
 }
 
 /* Sections --------------------------------------------------------------- */
@@ -667,9 +653,13 @@ a:hover {
 /* Responsive tweaks ------------------------------------------------------ */
 
 @media (max-width: 991.98px) {
-  .hero-monogram {
+  .hero-portrait {
     margin: 0 auto;
-    max-width: 280px;
+    max-width: 300px;
+  }
+
+  .hero-portrait figcaption {
+    text-align: center;
   }
 }
 
