@@ -4,16 +4,17 @@
    ========================================================================== */
 
 :root {
-  --color-bg: #f9fafc;
-  --color-surface: #ffffff;
-  --color-text: #171a21;
-  --color-text-soft: #4b5261;
-  --color-muted: #767d8d;
-  --color-border: #e4e7ee;
-  --color-border-strong: #ccd1dc;
-  --color-accent: #1d4ed8;
-  --color-accent-dark: #1e3a8a;
-  --color-accent-soft: #e9eefb;
+  --color-bg: #0b1220;
+  --color-surface: #131c33;
+  --color-text: #f1f5f9;
+  --color-text-soft: #c7d0e0;
+  --color-muted: #93a0b8;
+  --color-border: #23304c;
+  --color-border-strong: #374766;
+  --color-accent: #60a5fa;
+  --color-accent-dark: #93c5fd;
+  --color-accent-soft: rgba(59, 130, 246, 0.16);
+  --color-accent-solid: #2563eb;
   --color-dark: #0b1220;
   --color-dark-accent: #60a5fa;
 
@@ -23,7 +24,7 @@
   --header-height: 72px;
   --radius-sm: 4px;
   --radius-md: 6px;
-  --shadow-soft: 0 1px 2px rgba(23, 26, 33, 0.05), 0 8px 24px rgba(23, 26, 33, 0.06);
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
 /* Base ------------------------------------------------------------------- */
@@ -56,7 +57,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-accent);
+  background: var(--color-accent-solid);
   color: #fff;
 }
 
@@ -81,7 +82,7 @@ a:hover {
   left: 1rem;
   z-index: 2000;
   padding: 0.6rem 1rem;
-  background: var(--color-accent);
+  background: var(--color-accent-solid);
   color: #fff;
   border-radius: var(--radius-sm);
 }
@@ -103,25 +104,16 @@ a:hover {
 }
 
 .btn-primary {
-  --bs-btn-bg: var(--color-accent);
-  --bs-btn-border-color: var(--color-accent);
-  --bs-btn-hover-bg: var(--color-accent-dark);
-  --bs-btn-hover-border-color: var(--color-accent-dark);
-  --bs-btn-active-bg: var(--color-accent-dark);
-  --bs-btn-active-border-color: var(--color-accent-dark);
-  --bs-btn-focus-shadow-rgb: 29, 78, 216;
+  --bs-btn-bg: var(--color-accent-solid);
+  --bs-btn-border-color: var(--color-accent-solid);
+  --bs-btn-hover-bg: #1d4ed8;
+  --bs-btn-hover-border-color: #1d4ed8;
+  --bs-btn-active-bg: #1d4ed8;
+  --bs-btn-active-border-color: #1d4ed8;
+  --bs-btn-focus-shadow-rgb: 96, 165, 250;
 }
 
 .btn-outline-dark {
-  --bs-btn-color: var(--color-text);
-  --bs-btn-border-color: var(--color-border-strong);
-  --bs-btn-hover-bg: var(--color-text);
-  --bs-btn-hover-border-color: var(--color-text);
-  --bs-btn-active-bg: var(--color-text);
-  --bs-btn-active-border-color: var(--color-text);
-}
-
-.hero .btn-outline-dark {
   --bs-btn-color: #fff;
   --bs-btn-border-color: rgba(255, 255, 255, 0.45);
   --bs-btn-hover-color: var(--color-dark);
@@ -211,7 +203,7 @@ a:hover {
   padding: calc(var(--header-height) + clamp(3.5rem, 9vw, 6.5rem)) 0 clamp(3.5rem, 9vw, 6.5rem);
   background-color: var(--color-dark);
   background-image: radial-gradient(1100px 480px at 78% -10%, rgba(59, 130, 246, 0.16), transparent 62%);
-  border-bottom: none;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .hero-eyebrow {
@@ -442,7 +434,7 @@ a:hover {
 }
 
 .project-item:hover {
-  background-color: rgba(29, 78, 216, 0.03);
+  background-color: rgba(96, 165, 250, 0.06);
 }
 
 .project-index {
